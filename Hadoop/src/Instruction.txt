@@ -1,0 +1,31 @@
+Working :
+
+ 
+1.  make simple (.txt) file  and inside the file  put some Entry in terms of document  Id .and    then   give each doc  different ID.  
+Example: 
+Doc[0] = "i am jagpreet singh thakur" 
+Doc[1] = "who is he" 
+Doc[2] = "he is mukul" 
+ 
+   
+2. We put that file into Hadoop dir . // command -> ./Hadoop fs -put <host file path> <hadoop dir path> 
+ 
+3. After that goto eclipse and make new (.jar) File  . 
+ 
+4. finally  put aeverything with (.jar) file in to hdfs and run  our programme  // command  Hadoop jar  <.jar file path>  Class Name <Hadoop dir path where input file is present> <Hadoop dir path where we should store our output>. 
+5. After applying the Indexing algorithm, we get  Like OUTPUT(Demo) 
+
+ 
+ Doc[1]  Doc[2]  Doc[0]  
+"he Doc[2]  
+"i Doc[0]  
+"who Doc[1]  
+am Doc[0]  
+he" Doc[1]  
+is Doc[1]  Doc[2]  
+jagpreet Doc[0]  
+mukul" Doc[2]  
+singh Doc[0]  
+thakur" Doc[0]  
+ 
+Where  "a": {3} implies the term "a" appears in the Doc[3] file. Similarly, "is": Doc[1]  Doc[2]  implies the term "is" appears in the files Doc[1] and Doc[2]. 
